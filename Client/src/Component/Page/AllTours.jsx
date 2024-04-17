@@ -1,6 +1,9 @@
 import React, { useState , useEffect } from 'react'
 import axios, { all } from 'axios'
 // import Tour from '../Tour/Tour'
+// import {tour_1_cover} from "../../../public/img/tours/tour-1-cover.jpg"
+//  ../../../public/img/tours/tour-1-cover.jpg
+
 import {motion} from "framer-motion"
 const AllTours = () => {
   const [data , setData] = useState([])
@@ -48,7 +51,7 @@ const AllTours = () => {
       {tours.map((tour) => (
            <div key={tour.id} className='border p-3 bg-white rounded-xl flex flex-col gap-y-3 ease-in-out duration-300 hover:-translate-y-[3px] '>
             <div className='border'>
-               <img className='w-full h-full' src="https://natours.netlify.app/img/nat-2.jpg" alt="" />
+               <img className='w-full h-full' src={`../../../public/img/tours/${tour.imageCover}`} alt="" />
                
             </div>
             <div className='flex flex-col gap-y-3'>
