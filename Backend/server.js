@@ -16,8 +16,8 @@ const app = require('./app');
 // );
 
 mongoose
-  .connect(process.env.DATABASE)
-  .then(() => console.log('DB connection successful!'));
+ .connect(process.env.HARMEET_DATABASE)
+  .then(() => console.log("DB connection successful!"));
 
 const port = 3000;
 
