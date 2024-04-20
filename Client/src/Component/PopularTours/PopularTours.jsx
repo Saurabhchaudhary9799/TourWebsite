@@ -12,7 +12,7 @@ const PopularTours = () => {
                  <div  className=" relative tour-card w-[350px] h-[500px]  ">
                     <div className="  front absolute  border h-[100%] w-[100%]  flex flex-col gap-y-2 ">
                         <div className='relative border'>
-                            <img className='h-[100%] w-[100%]' src="https://natours.netlify.app/img/nat-2.jpg" alt="" />
+                            <img className='h-[100%] w-[100%]' src="../../../public/img/tours/tour-1-2.jpg" alt="" />
                             <div className=' absolute    bottom-0  right-[10px] flex flex-col items-end'>
                                <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f" , opacity:0.8}}>THE FOREST</span>
                                <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f",opacity:0.8}}>HIKER</span>
@@ -37,7 +37,7 @@ const PopularTours = () => {
                  <div  className=" relative tour-card w-[350px] h-[500px]  ">
                     <div className="  front absolute  border h-[100%] w-[100%]  flex flex-col gap-y-2 ">
                         <div className='relative border'>
-                            <img className='h-[100%] w-[100%]' src="https://natours.netlify.app/img/nat-2.jpg" alt="" />
+                            <img className='h-[100%] w-[100%]' src="../../../public/img/tours/tour-1-3.jpg" alt="" />
                             <div className=' absolute    bottom-0  right-[10px] flex flex-col items-end'>
                                <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f" , opacity:0.8}}>THE FOREST</span>
                                <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f",opacity:0.8}}>HIKER</span>
@@ -62,7 +62,7 @@ const PopularTours = () => {
                  <div  className=" relative tour-card w-[350px] h-[500px] ">
                     <div className="  front absolute  border h-[100%] w-[100%]  flex flex-col gap-y-2 ">
                         <div className='relative border'>
-                            <img className='h-[100%] w-[100%]' src="https://natours.netlify.app/img/nat-2.jpg" alt="" />
+                            <img className='h-[100%] w-[100%]' src="../../../public/img/tours/tour-1-1.jpg" alt="" />
                             <div className=' absolute    bottom-0  right-[10px] flex flex-col items-end'>
                                <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f" , opacity:0.8}}>THE FOREST</span>
                                <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f",opacity:0.8}}>HIKER</span>

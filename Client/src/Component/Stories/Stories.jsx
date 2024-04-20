@@ -10,7 +10,7 @@ const Stories = () => {
             <div className='  flex flex-col items-center justify-center py-10 gap-y-10 '>
                 <div className='stories border flex w-[800px] p-5 gap-x-5 rounded-[20px]'>
                  <div className='w-2/6 flex justify-center items-center '>
-                    <img className='rounded-[100px] w-48 h-48 object-cover' src="https://natours.netlify.app/img/nat-8.jpg" alt="" />
+                    <img className='rounded-[100px] w-48 h-48 object-cover' src="../../../public/img/users/user-1.jpg" alt="" />
                  </div>
                  <div className='w-4/6 flex flex-col gap-y-3'>
                     <h1 className='text-[#777] text-xl font-bold'>I HAD THE BEST WEEK EVER WITH MY FAMILY</h1>
@@ -19,7 +19,7 @@ const Stories = () => {
                 </div>
                 <div className='stories border flex w-[800px] p-5 gap-x-5 rounded-[20px]'>
                  <div className='w-2/6 flex justify-center items-center '>
-                    <img className='rounded-[100px] w-48 h-48 object-cover' src="https://natours.netlify.app/img/nat-9.jpg" alt="" />
+                    <img className='rounded-[100px] w-48 h-48 object-cover' src="../../../public/img/users/user-2.jpg" alt="" />
                  </div>
                  <div className='w-4/6 flex flex-col gap-y-3'>
                     <h1 className='text-[#777] text-xl font-bold'>WOW! MY LIFE IS COMPLETELY DIFFERENT NOW
