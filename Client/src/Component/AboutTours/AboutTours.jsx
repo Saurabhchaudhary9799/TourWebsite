@@ -25,9 +25,9 @@ const AboutTours = () => {
                     </div>
                 </div>
                 <div className='relative  w-3/6 '>
-                    <div className='ease-in-out absolute left-[20px] top-0  z-1  hover:border-[15px] p-4 hover:rounded-[15px] hover:border-[#32af6f] hover:z-40'><img src="https://natours.netlify.app/img/nat-3.jpg" alt="" /></div>
-                    <div className='ease-in-out  z-2 absolute bottom-[30px] right-0 hover:border-[15px]  p-4 hover:rounded-[15px] hover:border-[#32af6f]   hover:z-40'><img src="https://natours.netlify.app/img/nat-1.jpg" alt="" /></div>
-                    <div className='ease-in-out z-3 absolute bottom-0 left-[100px] hover:border-[15px] p-4 hover:rounded-[15px] hover:border-[#32af6f]' ><img src="https://natours.netlify.app/img/nat-2.jpg" alt="" /></div>
+                    <div className='ease-in-out absolute left-[20px] top-0  z-1  hover:border-[15px] p-4 hover:rounded-[15px] hover:border-[#32af6f] hover:z-40'><img className="w-[350px] h-[200px]" src="../../../public/img/tours/tour-1-1.jpg" alt="" /></div>
+                    <div className='ease-in-out  z-2 absolute bottom-[30px] right-0 hover:border-[15px]  p-4 hover:rounded-[15px] hover:border-[#32af6f]   hover:z-40'><img  className="w-[350px] h-[200px]" src="../../../public/img/tours/tour-1-2.jpg" alt="" /></div>
+                    <div className='ease-in-out z-3 absolute bottom-0 left-[100px] hover:border-[15px] p-4 hover:rounded-[15px] hover:border-[#32af6f]' ><img  className="w-[350px] h-[200px]" src="../../../public/img/tours/tour-1-3.jpg" alt="" /></div>
                 </div>
              </div>
         </div>

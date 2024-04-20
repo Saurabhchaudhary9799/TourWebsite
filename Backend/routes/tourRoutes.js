@@ -34,13 +34,9 @@ router
 router.route("/distances/:latlng/unit/:unit").get(tourController.getDistances);
 
 router
-  .route("/")
-  .get(tourController.getAllTours)
-  .post(
-    authController.protect,
-    authController.restrictTo("admin", "lead-guide"),
-    tourController.createTour
-  );
+  .route('/')
+  .get(authController.protect, authController.restrictTo('admin', 'lead-tour'), tourController.getAllTours)
+  .post(tourController.createTour);
 
 router
   .route("/:id")
