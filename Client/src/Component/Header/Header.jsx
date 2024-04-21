@@ -24,7 +24,10 @@ const Header = () => {
      <div className='header-section flex justify-center  mt-5 bg-black py-3'>
          <div className="container  flex justify-between items-center px-10">
              <div className='flex justify-center items gap-x-2 text-3xl text-[#32af6f]'>
-                 <i className='bi bi-back'></i> <span>NATOURS</span>
+               <Link to={"/"}>
+               <i className='bi bi-back'></i> <span>NATOURS</span>
+               </Link>
+                 
              </div>
              {user ? <Profile user={user}/> : <div className=' flex justify-center items-center px-3 py-2 gap-x-10'>
                 <motion.div whileHover={{y:-2}} className='text-white'><Link to={"/login"}>LOGIN</Link></motion.div>

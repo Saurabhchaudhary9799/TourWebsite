@@ -55,7 +55,7 @@ const Login = () => {
                 <input className='w-full h-full border-none' type="password" placeholder='Password'  onChange={(e) => {setPassword(e.target.value); }} value={password} />
              </div>
              <div className='form-group  text-right'>
-               <Link className='hover:text-[#32af6f] hover:underline'>Forgot password? </Link>
+               <Link to={"/forgot-password"} className='hover:text-[#32af6f] hover:underline'>Forgot password? </Link>
              </div>
              <div>
                 <div className='flex justify-center items-center border h-[50px] bg-[#32af6f] text-white text-lg rounded-2xl hover:cursor-pointer' onClick={handleLogin} >LOGIN</div>

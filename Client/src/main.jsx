@@ -14,6 +14,7 @@ import UpdateTour from './Component/UpdateTour/UpdateTour.jsx'
 import DeleteTour from './Component/DeleteTour/DeleteTour.jsx'
 import Admin from './Component/Page/Admin.jsx'
 import UserDashboard from './Component/Page/userDashboard/UserDashboard.jsx'
+import ForgotPassword from './Component/ForgotPassword/ForgotPassword.jsx'
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path:"signup",
         element:<Signup/>
+      },
+      {
+        path:"forgot-password",
+        element:<ForgotPassword/>
       },
       {
           path:"/dashboard",

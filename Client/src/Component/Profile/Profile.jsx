@@ -24,7 +24,7 @@ const Profile = ({user}) => {
        <div className="profile-section relative">
            <span onClick={()=>setIsOpen(!isOpen)} className="text-white text-2xl"><CgProfile/></span>
            {isOpen && 
-           <div className=" z-30 bg-white absolute top-8 right-5 w-[200px] rounded-xl flex flex-col gap-y-1 pl-3">
+           <div className=" z-30 bg-white absolute top-8 right-5  rounded-xl flex flex-col gap-y-1 pl-3">
                <div>{user.name}</div>
                <div>{user.email}</div>
                <div className="flex justify-start items-center gap-x-2 hover:text-[#777]"> 
