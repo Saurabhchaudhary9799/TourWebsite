@@ -3,46 +3,11 @@ import axios, { all } from 'axios'
 // import Tour from '../Tour/Tour'
 // import {tour_1_cover} from "../../../public/img/tours/tour-1-cover.jpg"
 //  ../../../public/img/tours/tour-1-cover.jpg
-
+import {Link} from "react-router-dom"
 import {motion} from "framer-motion"
-const AllTours = () => {
-  const [data , setData] = useState([])
-  const [loading , setLoading] = useState(true)
-  const [error , setError] = useState(null)
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-       
-        setLoading(true);
-        
-        const response = await axios.get('http://localhost:3000/api/v1/tours');
-       
-        setData(response.data);
-       
-        setLoading(false);
-      } catch (error) {
-        
-        setError(error);
-       
-        setLoading(false);
-      }
-    };
 
-    fetchData();
-  }, []);
-
- 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
- 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
-   const allTours = data.data;
-   const tours=allTours.tours;
+const AllTours = ({tours}) => {
+  
    
   return (
     <section className="all-tours-section flex justify-center py-16 px-16 bg-[#F3F4F5]">
@@ -73,9 +38,9 @@ const AllTours = () => {
                    <div className='text-[#777]'><span className='text-[#777] text-sm font-bold'>{tour.ratingsAverage}</span> rating</div>
                  </div>
                  <div className='w-3/6 flex justify-center items-center'>
-                    <motion.div whileHover={{y:-2}} className='border p-2 rounded-3xl bg-[#32af6f] text-white'> Details</motion.div>
+                    <motion.div whileHover={{y:-2}} className='border p-2 rounded-3xl bg-[#32af6f] text-white'> <Link to={`/product/${tour.id}`}>Details</Link></motion.div>
                  </div>
-                 </div>
+                 </div> 
               </div>
            </div>
         ))}

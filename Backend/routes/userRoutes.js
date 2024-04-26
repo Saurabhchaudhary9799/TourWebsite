@@ -1,8 +1,14 @@
 const express = require("express");
 const userController = require("./../controllers/userController");
 const authController = require("./../controllers/authController");
+const bookingController = require("./../controllers/bookingController");
 
 const router = express.Router();
+
+router.get("/verified", bookingController.createBookingCheckout, (req, res) => {
+  // res.sendFile(path.join(__dirname))
+  res.render("emailVerified");
+});
 
 router.post("/signup", authController.signup);
 router.post("/login", authController.login);

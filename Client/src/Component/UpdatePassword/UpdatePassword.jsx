@@ -9,7 +9,7 @@ const UpdatePassword = ({handleClose}) => {
     
   const handleChanges = async() =>{
      try {
-       console.log(authToken)
+       
         const config = {
          headers: {
            'Content-Type': 'application/json',
