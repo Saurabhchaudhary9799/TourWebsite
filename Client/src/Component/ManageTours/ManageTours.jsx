@@ -10,7 +10,7 @@ const ManageTours = () => {
 
     
   return (
-    <section className="manage-tours-section border">
+    <section className="manage-tours-section ">
         <div className="container  flex flex-col gap-y-10 px-5">
             {
                 tours.map((tour) =>{
