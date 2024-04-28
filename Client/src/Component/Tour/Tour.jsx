@@ -5,7 +5,10 @@ import Hero from './Hero';
 import AboutTour from './AboutTour';
 import TourImages from './TourImages';
 import BookingSection from './BookingSection';
-const Tour = ({tours}) => {
+import { useUser } from '../ContextConfig/ContextConfig';
+import WeatherForcast from './WeatherForcast/WeatherForcast';
+const Tour = () => {
+  const {tours} = useUser();
  const {tourId} = useParams();
   // const tourId = match.params.id;
   const tour = tours.find( p => p.id === tourId);
@@ -16,6 +19,7 @@ const Tour = ({tours}) => {
         <Hero tour={tour}/>
         <AboutTour tour={tour}/>
         <TourImages tour ={tour}/>
+        <WeatherForcast tour ={tour}/>
         <BookingSection tour={tour}/>
     </>
   )

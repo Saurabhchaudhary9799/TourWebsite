@@ -6,19 +6,18 @@ import Profile from '../Profile/Profile';
 
 const Header = () => {
    const [user ,setUser] = useState('');
-    // const navigate = useNavigate();
+ 
     useEffect(()=>{
        const response = localStorage.getItem('userInfo');
        if(response){
-        const userObj = JSON.parse(response).data;
+        const userObj = JSON.parse(response).result;
         setUser(userObj.user);
         console.log(user)
        }
        
     },[])
     
-    
-
+   
 
   return (
      <div className='header-section flex justify-center  mt-5 bg-black py-3'>

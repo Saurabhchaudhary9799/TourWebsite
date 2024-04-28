@@ -1,12 +1,20 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const UpdateProfile = ({handleClose}) => {
+  const navigate = useNavigate();
     const [name , setName] = useState('');
     const [email , setEmail] = useState('');
      
-    const authToken = JSON.parse(localStorage.getItem('userInfo')).token;
+    
     
    const handleChanges = async() =>{
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    if (!userInfo) {
+      navigate("/login");
+    }
+
+    const authToken = userInfo.token;
       try {
         console.log(authToken)
          const config = {

@@ -1,50 +1,53 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import axios from "axios";
 
-const STRIPE_PUBLIC_KEY= 'pk_test_51P9W9zSJaXjtM26GxyEOJAqwULk7uW7CxETWocJtrQUTDSW1b7pMPvhTfdWrLMbISKPfTUM9TlUmEfSXd4XdMWYY00ZJxncgkA';
+const STRIPE_PUBLIC_KEY =
+  "pk_test_51P9W9zSJaXjtM26GxyEOJAqwULk7uW7CxETWocJtrQUTDSW1b7pMPvhTfdWrLMbISKPfTUM9TlUmEfSXd4XdMWYY00ZJxncgkA";
 
-const BookingSection = ({tour}) => {
- const tourId = tour.id;
- const [stripe ,setStripe] = useState(null);
+const BookingSection = ({ tour }) => {
+  const navigate = useNavigate();
+  const tourId = tour.id;
+  const [stripe, setStripe] = useState(null);
 
-
- useEffect(() => {
-  if (window.Stripe) {
+  useEffect(() => {
+    if (window.Stripe) {
       setStripe(window.Stripe(STRIPE_PUBLIC_KEY));
-  } else {
-      document.querySelector('#stripe-js').addEventListener('load', () => {
-          // Create Stripe instance once Stripe.js loads
-          setStripe(window.Stripe(STRIPE_PUBLIC_KEY));
+    } else {
+      document.querySelector("#stripe-js").addEventListener("load", () => {
+        // Create Stripe instance once Stripe.js loads
+        setStripe(window.Stripe(STRIPE_PUBLIC_KEY));
       });
-  }
-}, []);
+    }
+  }, []);
 
- const authToken = JSON.parse(localStorage.getItem('userInfo')).token;
-  const handleBooking =async () =>{
-       try {
-         
-        const config = {
-          headers: {
-            'authorization': `Bearer ${authToken}`,
-          }
-         }
-          // 1) Get checkout session from API
-          const session = await axios.get(
-            `http://127.0.0.1:3000/api/v1/bookings/checkout-session/${tourId}`,config
-          );
-          console.log(session),
-      
+  const handleBooking = async () => {
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    if (!userInfo) {
+      navigate("/login");
+    }
 
-           await stripe.redirectToCheckout({
-            sessionId : session.data.session.id,
-           })
-           
-       } catch (error) {
-          console.log(error)
-       }
-  }
+    const authToken = userInfo.token;
+    try {
+      const config = {
+        headers: {
+          authorization: `Bearer ${authToken}`,
+        },
+      };
+      // 1) Get checkout session from API
+      const session = await axios.get(
+        `http://127.0.0.1:3000/api/v1/bookings/checkout-session/${tourId}`,
+        config
+      );
+      console.log(session),
+        await stripe.redirectToCheckout({
+          sessionId: session.data.session.id,
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <section className="booking-section flex justify-center py-16 px-10 bg-[#F3F4F5]">

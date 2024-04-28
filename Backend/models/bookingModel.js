@@ -23,13 +23,16 @@ const bookingSchema = new mongoose.Schema({
     type: Boolean,
     default: true,  
   }
-  
+ 
+},  {
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true },
 });
 
 bookingSchema.pre(/^find/, function(next) {
   this.populate('user').populate({
     path: 'tour',
-    select: 'name'
+    select: 'email'
   });
   next();
 });

@@ -19,9 +19,16 @@ const Login = () => {
            }
          })
           
+         if(data){
+           localStorage.setItem('userInfo' , JSON.stringify(data))
+           if(data?.result?.user?.role === 'admin'){
+              navigate("/admin");
+           }else{
+              navigate("/");
+           }
+         }
          
-         localStorage.setItem('userInfo' , JSON.stringify(data))
-         navigate("/")
+        
       } catch (error) {
         console.log(error);
      }

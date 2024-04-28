@@ -1,7 +1,9 @@
 const express = require("express");
+
 const userController = require("./../controllers/userController");
 const authController = require("./../controllers/authController");
 const bookingController = require("./../controllers/bookingController");
+
 
 const router = express.Router();
 
@@ -20,9 +22,9 @@ router.use(authController.protect);
 
 router.patch("/updateMyPassword", authController.updatePassword);
 router.get("/me", userController.getMe, userController.getUser);
-router.patch("/updateMe", userController.updateMe);
+router.patch("/updateMe",userController.uploadUserPhoto,userController.resizeUserPhoto, userController.updateMe);
 router.delete("/deleteMe", userController.deleteMe);
-
+router.get("/bookings",userController.getUserBookings)
 router.use(authController.restrictTo("admin"));
 
 router
@@ -36,4 +38,7 @@ router
   .patch(userController.updateUser)
   .delete(userController.deleteUser);
 
+router.get("/stats", userController.getStatsNatours);
+
 module.exports = router;
+

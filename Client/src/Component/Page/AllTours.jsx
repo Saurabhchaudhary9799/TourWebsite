@@ -5,9 +5,15 @@ import axios, { all } from 'axios'
 //  ../../../public/img/tours/tour-1-cover.jpg
 import {Link} from "react-router-dom"
 import {motion} from "framer-motion"
+import { useUser } from '../ContextConfig/ContextConfig'
+import Loading from '../Loading/Loading'
 
-const AllTours = ({tours}) => {
-  
+const AllTours = () => {
+  const {tours ,loading ,error} = useUser();
+   
+  if(loading) return <Loading/>
+  if(error) return <h1>Error...</h1>
+
    
   return (
     <section className="all-tours-section flex justify-center py-16 px-16 bg-[#F3F4F5]">

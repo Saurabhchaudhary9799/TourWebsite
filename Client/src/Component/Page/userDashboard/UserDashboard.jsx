@@ -8,7 +8,7 @@ const UserDashboard = () => {
    useEffect(()=>{
          const response = localStorage.getItem('userInfo');
          if(response){
-          const userObj = JSON.parse(response).data;
+          const userObj = JSON.parse(response).result;
           setUser(userObj.user);
           
          }else{
