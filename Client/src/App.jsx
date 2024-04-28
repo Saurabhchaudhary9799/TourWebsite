@@ -8,7 +8,7 @@ import Footer from "./Component/Footer/Footer"
 import Login from "./Component/Page/Login"
 import Signup from "./Component/Page/Signup"
 import Admin from "./Component/Page/Admin"
-import Dashboard from "./Component/Dashboard/Dashboard"
+
 import CreateTour from "./Component/CreateTour/CreateTour"
 import DeleteTour from "./Component/DeleteTour/DeleteTour"
 import UpdateTour from "./Component/UpdateTour/UpdateTour"
@@ -16,6 +16,9 @@ import Layout from "./Component/Page/Layout"
 import ForgotPassword from "./Component/ForgotPassword/ForgotPassword"
 import Tour from "./Component/Tour/Tour"
 import UserDashboard from "./Component/Page/userDashboard/UserDashboard"
+import AdminDashboard from "./Component/AdminDashboard/AdminDashboard";
+import ManageUsers from "./Component/ManageUsers/ManageUsers";
+import ManageTours from "./Component/ManageTours/ManageTours";
 function App() {
  
   return (
@@ -32,10 +35,11 @@ function App() {
        <Route path="/dashboard" element={<UserDashboard/>}/>
        <Route path="product/:tourId" element={<Tour />} />
       <Route path="admin/" element={<Admin/>}>
-          <Route path="" element={<Dashboard/>}/>
+          <Route path="" element={<AdminDashboard/>}/>
           <Route path="create-tour" element={<CreateTour/>}/>
-          <Route path="update-tour" element={<UpdateTour/>}/>
-          <Route path="delete-tour" element={<DeleteTour/>}/>
+          <Route path="manage-tour" element={<ManageTours/>}/>
+         
+          <Route path="manage-users" element={<ManageUsers/>}/>
       </Route>
      </Route>
     </Routes>

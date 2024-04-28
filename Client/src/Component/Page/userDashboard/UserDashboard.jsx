@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Dashboard from './Dashboard';
+import AdminDashboard from '../../AdminDashboard/AdminDashboard';
+import Admin from '../Admin';
 
 const UserDashboard = () => {
   const [user ,setUser] = useState({});
@@ -18,7 +20,7 @@ const UserDashboard = () => {
   return (
     <>
     {
-      user && <Dashboard user={user}/> 
+   (user.role === 'admin') ? <Admin/>: <Dashboard user={user}/> 
     }
     
     </>

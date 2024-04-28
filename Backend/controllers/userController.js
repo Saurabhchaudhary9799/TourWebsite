@@ -131,7 +131,7 @@ exports.getStatsNatours = catchAsync(async(req,res,next)=>{
 
 
 exports.getUser = factory.getOne(User, { path: "bookings" });
-exports.getAllUsers = factory.getAll(User);
+exports.getAllUsers = factory.getAll(User,{path:"bookings",select:"tour"});
 
 // Do NOT update passwords with this!
 exports.updateUser = factory.updateOne(User);

@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const Dashboard = () => {
+const AdminDashboard = () => {
   const navigate = useNavigate();
 // const [totolTours ,setTotalTours] = useState(0);
 // const [totalUsers , setTotalUsers] = useState(0);
@@ -42,4 +42,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default AdminDashboard
