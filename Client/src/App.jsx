@@ -10,8 +10,8 @@ import Signup from "./Component/Page/Signup"
 import Admin from "./Component/Page/Admin"
 
 import CreateTour from "./Component/CreateTour/CreateTour"
-import DeleteTour from "./Component/DeleteTour/DeleteTour"
-import UpdateTour from "./Component/UpdateTour/UpdateTour"
+
+import UpdateTours from "./Component/UpdateTours/UpdateTours"
 import Layout from "./Component/Page/Layout"
 import ForgotPassword from "./Component/ForgotPassword/ForgotPassword"
 import Tour from "./Component/Tour/Tour"
@@ -38,7 +38,7 @@ function App() {
           <Route path="" element={<AdminDashboard/>}/>
           <Route path="create-tour" element={<CreateTour/>}/>
           <Route path="manage-tour" element={<ManageTours/>}/>
-         
+          <Route path="update-tour" element={<UpdateTours/>}/>
           <Route path="manage-users" element={<ManageUsers/>}/>
       </Route>
      </Route>

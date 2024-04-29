@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import UserDetail from "../UserDetails/UserDetail";
 const ManageUsers = () => {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
@@ -33,37 +34,24 @@ const ManageUsers = () => {
   }, []);
 
   return (
-    <section className="manage-user-section border ">
-      <div className="container border py-5 px-2 flex flex-col">
+    <section className="manage-user-section   ">
+      <div className="container  py-5 px-2 flex flex-col ">
         <div className="grid grid-cols-12 gap-2">
-          <div className="col-span-3 border text-center font-extrabold ">
+          <div className="col-span-3  text-center font-extrabold ">
             User_id
           </div>
-          <div className="border col-span-2 text-center font-extrabold ">Name</div>
-          <div className="col-span-3 border text-center font-extrabold ">
+          <div className=" col-span-2 text-center font-extrabold ">Name</div>
+          <div className="col-span-3  text-center font-extrabold ">
             Email
           </div>
-          <div className="border text-center font-extrabold ">Role</div>
+          <div className=" text-center font-extrabold ">Role</div>
          
-          <div className="col-span-3 border text-center font-extrabold ">
+          <div className="col-span-2  text-center font-extrabold ">
             Booked Tours{" "}
           </div>
         </div>
         {users.map((user, index) => {
-          return <div className="grid grid-cols-12 gap-2">
-          <div className="col-span-3 border text-center text-[#777] text-[15px] ">
-            {user.id}
-          </div>
-          <div className="border col-span-2 text-center text-[#777] text-[15px] ">{user.name}</div>
-          <div className="col-span-3 border text-center text-[#777] text-[15px] ">
-            {user.email}
-          </div>
-          <div className="border text-center text-[#777] text-[15px] ">{user.role}</div>
-         
-          <div className="col-span-3 border text-center text-[#777] text-[15px] ">
-            Booked Tours{" "}
-          </div>
-        </div>;
+          return <UserDetail key={index} user={user}/>
         })}
       </div>
     </section>

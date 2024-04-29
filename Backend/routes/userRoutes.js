@@ -12,6 +12,8 @@ router.get("/verified", bookingController.createBookingCheckout, (req, res) => {
   res.render("emailVerified");
 });
 
+router.get("/natour-stats",userController.getNatourStats);
+router.get("/user-Stats",userController.getUserStats);
 router.post("/signup", authController.signup);
 router.post("/login", authController.login);
 router.post("/forgotPassword", authController.forgotPassword);
@@ -38,7 +40,7 @@ router
   .patch(userController.updateUser)
   .delete(userController.deleteUser);
 
-router.get("/stats", userController.getStatsNatours);
+
 
 module.exports = router;
 

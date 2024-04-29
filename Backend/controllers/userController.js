@@ -116,19 +116,34 @@ exports.createUser = (req, res) => {
   });
 };
 
-exports.getStatsNatours = catchAsync(async(req,res,next)=>{
- 
-    const tours = await Tour.find();
-    const users = await User.find();
-    console.log(tours);
-    console.log(users);
-    res.status(200).json({
-      status:"success",
-      totalTours:tours.length,
-      totalUsers:users.length
-    })
+
+
+exports.getUserStats = catchAsync(async(req,res,next)=>{
+  const result = await User.aggregate([
+    { $count: "totalUsers" }
+]);
+  res.status(200).json({result});
 })
 
+exports.getNatourStats = catchAsync(async(req,res,next)=>{
+  const totalUsers = await User.countDocuments();
+  const totalTours = await Tour.countDocuments();
+  const totalBookings = await Booking.countDocuments();
+const result = await Booking.aggregate([
+  {
+      $group: {
+          _id: null, 
+          totalRevenue: { $sum: "$price" }
+      }
+  }
+])
+  res.status(200).json({
+    totalUsers,
+    totalTours,
+    totalBookings,
+    result
+  })
+})
 
 exports.getUser = factory.getOne(User, { path: "bookings" });
 exports.getAllUsers = factory.getAll(User,{path:"bookings",select:"tour"});

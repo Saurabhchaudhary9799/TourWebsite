@@ -16,7 +16,7 @@ const UpdateProfile = ({handleClose}) => {
 
     const authToken = userInfo.token;
       try {
-        console.log(authToken)
+       
          const config = {
           headers: {
             'Content-Type': 'application/json',

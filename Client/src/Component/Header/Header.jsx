@@ -15,7 +15,7 @@ const Header = () => {
         console.log(user)
        }
        
-    },[])
+    },[1])
     
    
 
@@ -28,6 +28,7 @@ const Header = () => {
                </Link>
                  
              </div>
+             
              {user ? <Profile user={user}/> : <div className=' flex justify-center items-center px-3 py-2 gap-x-10'>
                 <motion.div whileHover={{y:-2}} className='text-white'><Link to={"/login"}>LOGIN</Link></motion.div>
                 <motion.div whileHover={{y:-2}}  className='border px-4 py-2 rounded-3xl text-white hover:text-black hover:bg-white'><Link to={"/signup"}>SIGNUP</Link></motion.div>

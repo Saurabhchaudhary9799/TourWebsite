@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./UpdateTours.css"
+import { useLocation } from 'react-router-dom';
 const UpdateTours = () => {
     const [selectedDate, setSelectedDate] = useState(null);
-
+  const location  = useLocation();
+  console.log(location.state.tour.id);
     const handleDateChange = (date) => {
       setSelectedDate(date);
     };
@@ -41,6 +43,12 @@ const UpdateTours = () => {
                </div>
                <div className='col-span-2' >
                    <input type="text" placeholder='Price' className='w-full h-full rounded-xl' />
+               </div>
+               <div className='col-span-2' >
+                   <input type="file" placeholder='Price' className='w-full h-full rounded-xl border border-[#777]' />
+               </div>
+               <div className='col-span-2' >
+                   <textarea  cols="90" rows="5" className='rounded-xl' placeholder='Write Dscription'></textarea>
                </div>
                <div className='col-span-2' >
                     <div className='border p-2 rounded-xl bg-[#32af6f] text-center text-white'>Update Tour</div>

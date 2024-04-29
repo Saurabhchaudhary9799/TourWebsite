@@ -1,6 +1,6 @@
 // "use client"
 // import React, { useState } from 'react'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { FaRegUser } from "react-icons/fa";
 import { CiLogout } from "react-icons/ci";
@@ -15,9 +15,12 @@ import { Link } from "react-router-dom";
 
 const Profile = ({user}) => {
   const [isOpen ,setIsOpen] = useState(false);
+  
+  
  const handleSignout = () => {
     localStorage.removeItem('userInfo')
     setIsOpen(!isOpen);
+    window.location.reload();
  }
   return (
      <>
