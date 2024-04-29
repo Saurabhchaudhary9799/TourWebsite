@@ -1,11 +1,18 @@
 const express = require("express");
-
+const  cloudinary = require( 'cloudinary').v2;
 const userController = require("./../controllers/userController");
 const authController = require("./../controllers/authController");
 const bookingController = require("./../controllers/bookingController");
 
 
 const router = express.Router();
+
+          
+cloudinary.config({ 
+  cloud_name: 'dltk6m7c5', 
+  api_key: '693261271788558', 
+  api_secret: 'pQNNM5UC2ftuc5C5-Zi_dBjhLJ8' 
+});
 
 router.get("/verified", bookingController.createBookingCheckout, (req, res) => {
   // res.sendFile(path.join(__dirname))
@@ -24,7 +31,7 @@ router.use(authController.protect);
 
 router.patch("/updateMyPassword", authController.updatePassword);
 router.get("/me", userController.getMe, userController.getUser);
-router.patch("/updateMe",userController.uploadUserPhoto,userController.resizeUserPhoto, userController.updateMe);
+router.patch("/updateMe" ,userController.updateMe);
 router.delete("/deleteMe", userController.deleteMe);
 router.get("/bookings",userController.getUserBookings)
 router.use(authController.restrictTo("admin"));

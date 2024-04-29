@@ -33,7 +33,7 @@ const deleteTour = async(id)=>{
               <div className="w-2/6 ">
                 <img
                   className="w-full h-full rounded-xl"
-                  src={`../../../public/img/tours/${tour.imageCover}`}
+                  src={tour.imageCover}
                   alt=""
                 />
               </div>

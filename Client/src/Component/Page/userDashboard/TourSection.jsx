@@ -1,9 +1,36 @@
-import React, { useState } from 'react'
-
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 const TourSection = () => {
     const [status ,setStatus] =useState('completed');
 
-   
+
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    if (!userInfo) {
+      navigate("/login");
+    }
+
+    const authToken = userInfo.token;
+
+    const fetchTours = async() =>{
+         try {
+            const config = {
+                headers: {
+                  'Content-Type': 'application/json',
+                  'authorization': `Bearer ${authToken}`,
+                }
+               }
+       
+               const {data} = await axios.get('http://127.0.0.1:3000/api/v1/users/bookings' ,config);
+              console.log(data);
+         } catch (error) {
+            console.log(error)
+         }
+    }
+    useEffect(()=>{
+       fetchTours();
+    },[])
+
+
     const handleCompletedTour = ()=>{
         setStatus('completed')
     }

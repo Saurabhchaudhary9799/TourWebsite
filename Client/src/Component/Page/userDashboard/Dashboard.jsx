@@ -12,11 +12,12 @@ const Dashboard = ({user}) => {
          setUpdatePassword(false);
          setUpdateProfile(false);
     }
+
   return (
       <section className='dashboard-section flex justify-center bg-[#F3F4F5] py-16 '>
           <div className="container flex flex-col gap-y-10  ">
                 <div className='flex   justify-center gap-x-5'>
-                    <img className='w-32 h-32 rounded-full' src="../../../../public/img/users/user-1.jpg" alt="user_profile" />
+                    <img className='w-32 h-32 rounded-full object-cover' src={user.photo} alt="user_profile" />
                     <div className="user-details flex flex-col gap-y-1 justify-center   px-5">
                          <h1 className='text-2xl font-extrabold'>{user.name}</h1>
                          <h1 className='text-xl font-bold text-[#777]'>{user.email}</h1>

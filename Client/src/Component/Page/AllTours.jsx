@@ -22,7 +22,7 @@ const AllTours = () => {
       {tours.map((tour) => (
            <div key={tour.id} className='border p-3 bg-white rounded-xl flex flex-col gap-y-3 ease-in-out duration-300 hover:-translate-y-[3px] '>
             <div className='border'>
-               <img className='w-full h-full' src={`../../../public/img/tours/${tour.imageCover}`} alt="" />
+               <img className='w-full h-full' src={tour.imageCover} alt="" />
                
             </div>
             <div className='flex flex-col gap-y-3'>

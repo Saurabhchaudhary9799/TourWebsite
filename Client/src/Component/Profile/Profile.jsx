@@ -11,16 +11,19 @@ import { CiLogout } from "react-icons/ci";
 
 // import { Dropdown } from "flowbite-react";
 // import {  HiLogout, HiViewGrid } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Profile = ({user}) => {
+  const navigate= useNavigate();
   const [isOpen ,setIsOpen] = useState(false);
   
   
  const handleSignout = () => {
     localStorage.removeItem('userInfo')
     setIsOpen(!isOpen);
+    navigate("/login");
     window.location.reload();
+    
  }
   return (
      <>

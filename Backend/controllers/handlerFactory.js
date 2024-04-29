@@ -1,6 +1,7 @@
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const APIFeatures = require("../utils/apiFeatures");
+const cloudinary = require("cloudinary").v2;
 
 exports.deleteOne = (Model) =>
   catchAsync(async (req, res, next) => {
@@ -18,6 +19,17 @@ exports.deleteOne = (Model) =>
 
 exports.updateOne = (Model) =>
   catchAsync(async (req, res, next) => {
+    let imageCover;
+    if (req.files) {
+      imageCover = req.files.imageCover;
+
+      const result = await cloudinary.uploader.upload(imageCover.tempFilePath);
+      console.log(result.url);
+      req.body.imageCover = result.url;
+    }
+    
+
+   
     const doc = await Model.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
@@ -37,6 +49,13 @@ exports.updateOne = (Model) =>
 
 exports.createOne = (Model) =>
   catchAsync(async (req, res, next) => {
+    let imageCover;
+    if (req.files) imageCover = req.files.imageCover;
+
+    const result = await cloudinary.uploader.upload(imageCover.tempFilePath);
+    console.log(result.url);
+
+    req.body.imageCover = result.url;
     const doc = await Model.create(req.body);
 
     res.status(201).json({
@@ -65,7 +84,7 @@ exports.getOne = (Model, popOptions) =>
     });
   });
 
-exports.getAll = (Model,popOptions) =>
+exports.getAll = (Model, popOptions) =>
   catchAsync(async (req, res, next) => {
     // To allow for nested GET reviews on tour (hack)
     let filter = {};
@@ -83,6 +102,6 @@ exports.getAll = (Model,popOptions) =>
     res.status(200).json({
       status: "success",
       results: doc.length,
-      doc
+      doc,
     });
   });
