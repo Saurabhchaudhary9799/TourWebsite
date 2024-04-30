@@ -12,6 +12,8 @@ const router = express.Router();
 
 router.use("/:tourId/reviews", reviewRouter);
 
+router.route("/search/:key").get(tourController.searchTour);
+
 router
   .route("/top-5-cheap")
   .get(tourController.aliasTopTours, tourController.getAllTours);

@@ -10,6 +10,23 @@ exports.aliasTopTours = (req, res, next) => {
   next();
 };
 
+exports.searchTour = catchAsync(async (req, res, next) => {
+  console.log(req.params.key);
+  let tour = await Tour.find({
+    $or: [
+      { name: { $regex: req.params.key } },
+      { difficulty: { $regex: req.params.key } },
+      { summary: { $regex: req.params.key } },
+      { description: { $regex: req.params.key } },
+    ],
+  });
+  res.status(200).json({
+    status: "success",
+    result: tour.length,
+    tour,
+  });
+});
+
 exports.getAllTours = factory.getAll(Tour);
 exports.getTour = factory.getOne(Tour, { path: "reviews" });
 exports.createTour = factory.createOne(Tour);
