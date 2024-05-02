@@ -6,6 +6,7 @@ import Profile from "../Profile/Profile";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FiMenu } from "react-icons/fi";
 const Header = () => {
   const [user, setUser] = useState("");
   const [search, setSearch] = useState("");
@@ -57,7 +58,7 @@ const Header = () => {
             <i className="bi bi-back"></i> <span>NATOURS</span>
           </Link>
         </div>
-        <div className="border-none border-yellow flex justify-center item-center">
+        <div className="border-none border-yellow hidden justify-center item-center  md:flex">
           <div>
             <input
               className="border-none rounded-l-xl"
@@ -68,13 +69,14 @@ const Header = () => {
             />
           </div>
           <div
-            className="flex justify-center items-center bg-white p-2 rounded-r-xl"
+            className="flex justify-center items-center bg-white p-2 rounded-r-xl  "
             onClick={handleSearch}
           >
             <CiSearch />
             <ToastContainer />
           </div>
         </div>
+        <div className=" hidden md:block ">
         {user ? (
           <Profile user={user} />
         ) : (
@@ -90,6 +92,10 @@ const Header = () => {
             </motion.div>
           </div>
         )}
+        </div>
+        <div className="flex md:hidden text-white">
+            <span><FiMenu/></span>
+        </div>
       </div>
     </div>
   );

@@ -7,35 +7,35 @@ const Hero = () => {
   return (
     <div className='hero-section py-16 flex justify-center'>
       <div className="container flex flex-col gap-y-5">
-        <div className='flex justify-center gap-x-8'>
-          <div className='text-5xl text-white font-bold'>O</div>
-          <div className='text-5xl text-white font-bold'>U</div>
-          <div className='text-5xl text-white font-bold'>T</div>
-          <div className='text-5xl text-white font-bold'>D</div>
-          <div className='text-5xl text-white font-bold'>O</div>
-          <div className='text-5xl text-white font-bold'>O</div>
-          <div className='text-5xl text-white font-bold'>R</div>
-          <div className='text-5xl text-white font-bold'>S</div>
+        <div className='flex justify-center gap-x-4 text-[20px] sm:text-5xl sm:gap-x-8 text-white font-bold'>
+          <div >O</div>
+          <div >U</div>
+          <div >T</div>
+          <div >D</div>
+          <div >O</div>
+          <div >O</div>
+          <div >R</div>
+          <div >S</div>
         </div>
-        <div className='flex justify-center gap-x-8'>
-          <div className='flex justify-center gap-x-3'>
-            <div className="text-white">I</div>
-            <div className="text-white">S</div>
+        <div className='flex justify-center gap-x-4  sm:gap-x-8'>
+          <div className='flex justify-center  gap-x-1 sm:gap-x-3  text-white'>
+            <div >I</div>
+            <div >S</div>
           </div> 
-          <div className='flex justify-center gap-x-3'>
-            <div className="text-white">W</div>
-            <div className="text-white">H</div>
-            <div className="text-white">E</div>
-            <div className="text-white">R</div>
-            <div className="text-white">E</div>
+          <div className='flex justify-center gap-x-1 sm:gap-x-3 text-white'>
+            <div>W</div>
+            <div >H</div>
+            <div >E</div>
+            <div >R</div>
+            <div >E</div>
           </div>
-          <div className='flex justify-center gap-x-3'>
+          <div className='flex justify-center gap-x-1 sm:gap-x-3'>
             <div className="text-white">L</div>
             <div className="text-white">I</div>
             <div className="text-white">F</div>
             <div className="text-white">E</div>
           </div>
-          <div className='flex justify-center gap-x-3'>
+          <div className='flex justify-center gap-x-1 sm:gap-x-3'>
             <div className="text-white">H</div>
             <div className="text-white">A</div>
             <div className="text-white">P</div>

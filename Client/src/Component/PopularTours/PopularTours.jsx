@@ -8,7 +8,7 @@ const PopularTours = () => {
              <div className='flex justify-center'>
                 <h1 className='text-4xl font-extrabold text-[#32af6f]'>MOST POPULAR TOURS</h1>
              </div>
-             <div className="popular-tours flex justify-center gap-x-10 py-10 ">
+             <div className="popular-tours flex flex-col-reverse  items-center justify-center gap-y-10 py-10 md:flex-row md:gap-x-10 ">
                  <div  className=" relative tour-card w-[350px] h-[500px]  ">
                     <div className="  front absolute  border h-[100%] w-[100%]  flex flex-col gap-y-2 ">
                         <div className='relative border'>
