@@ -22,7 +22,7 @@ const TourSection = () => {
       };
 
       const { data } = await axios.get(
-        "http://127.0.0.1:3000/api/v1/users/bookings",
+        "https://natour-iy4i.onrender.com/api/v1/users/bookings",
         config
       );
       

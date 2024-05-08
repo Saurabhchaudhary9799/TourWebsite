@@ -37,7 +37,7 @@ const BookingSection = ({ tour }) => {
       };
       // 1) Get checkout session from API
       const session = await axios.get(
-        `http://127.0.0.1:3000/api/v1/bookings/checkout-session/${tourId}`,
+        `https://natour-iy4i.onrender.com/api/v1/bookings/checkout-session/${tourId}`,
         config
       );
       console.log(session),

@@ -6,7 +6,7 @@ const ForgotPassword = () => {
  const handleForgotPassword = async() =>{
     try {
       console.log(email)
-        const response  = await axios.post('http://127.0.0.1:3000/api/v1/users/forgotPassword',{
+        const response  = await axios.post('https://natour-iy4i.onrender.com/api/v1/users/forgotPassword',{
           email 
         },{
           headers: {

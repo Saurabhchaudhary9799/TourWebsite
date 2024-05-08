@@ -102,7 +102,7 @@ const CreateTour = () => {
         },
       };
       // ",{name,duration,difficulty,maxGroupSize ,price ,summary,startLocation}
-      const response = await axios.post("http://127.0.0.1:3000/api/v1/tours",formData ,config);
+      const response = await axios.post("https://natour-iy4i.onrender.com/api/v1/tours",formData ,config);
       console.log(response);
       if (response.data.status === "success") {
         toast("Tour is created successfully");

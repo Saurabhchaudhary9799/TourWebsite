@@ -31,7 +31,7 @@ const UpdateProfile = ({handleClose}) => {
          }
         
       
-         const {data} = await axios.patch('http://127.0.0.1:3000/api/v1/users/updateMe',formData ,config);
+         const {data} = await axios.patch('https://natour-iy4i.onrender.com/api/v1/users/updateMe',formData ,config);
 
          console.log(data);
         const userInfo = JSON.parse(localStorage.getItem('userInfo'));

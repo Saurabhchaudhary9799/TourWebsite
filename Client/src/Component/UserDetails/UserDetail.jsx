@@ -22,7 +22,7 @@ const UserDetail = ({ user }) => {
               'authorization': `Bearer ${authToken}`,
             }
            }
-          await axios.delete(`http://127.0.0.1:3000/api/v1/users/${id}`,config);
+          await axios.delete(`https://natour-iy4i.onrender.com/api/v1/users/${id}`,config);
            window.location.reload(); 
         } catch (error) {
           console.log(error);

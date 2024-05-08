@@ -14,7 +14,7 @@ const Signup = () => {
 
   const handleSignup = async()  =>{
       try {
-          const {data} = await axios.post('http://127.0.0.1:3000/api/v1/users/signup',{
+          const {data} = await axios.post('https://natour-iy4i.onrender.com/api/v1/users/signup',{
             name ,email ,password,passwordConfirm
           },{
             headers: {
