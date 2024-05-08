@@ -17,13 +17,13 @@ app.set('views', './views');
 //   '<PASSWORD>',
 //   process.env.DATABASE_PASSWORD
 // );
-
+console.log(process.env.DATABASE);
 mongoose
  .connect(process.env.DATABASE)
   .then(() => console.log("DB connection successfully!"));
 
 const port = process.env.PORT || 3000;
-
+console.log(port);
 const server = app.listen(port, () => {
   console.log(`App running on port ${port}...`);
 });
