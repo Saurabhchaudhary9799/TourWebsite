@@ -52,6 +52,11 @@ const Features = () => {
                   <p className='text-center text-[400] text-[#777]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sapiente.</p>
                 </div>
             </div>
+            
+            
+            
+            
+           
           </div>
           
     </section>

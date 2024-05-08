@@ -84,6 +84,7 @@ const PopularTours = () => {
                            <button className='border p-4 rounded-[30px] bg-white text-[#777] text-[400]'>BOOK NOW!</button>
                     </div>
                  </div>
+               
              </div>
              <div className='py-10  flex justify-center items-center'>
                  <motion.div whileHover={{scale:1.1}} className='border px-10 py-5 rounded-[35px] bg-[#32af6f] text-white'>

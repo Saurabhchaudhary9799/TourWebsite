@@ -10,7 +10,7 @@ const Stories = () => {
             <div className='  flex flex-col  md:items-center md:justify-center gap-y-10  p-2'>
                 <div className='stories   flex flex-col items-center  md:flex-row  md:p-5 md:gap-x-3 rounded-[20px]'>
                  <div className='  md:w-2/6  flex justify-center items-center '>
-                    <img className='rounded-full w-32 h-32 md:w-48 md:h-48 object-cover' src="../../../public/img/users/user-1.jpg" alt="" />
+                    <img className='rounded-full w-32 h-32 md:w-48 md:h-48 object-cover' src="../../../public/img/users/user-2.jpg" alt="" />
                  </div>
                  <div className='w-5/6 md:w-4/6 flex flex-col gap-y-3'>
                     <h1 className='text-[#777] text-xl font-bold '>I HAD THE BEST WEEK EVER WITH MY FAMILY</h1>

@@ -18,16 +18,20 @@ const AboutTours = () => {
                         <h1 className='text-[15px] text-[#777] font-bold'>LIKE ADVENTUROUS LIKE YOU HAVE NEVER BEFORE</h1>
                         <p className='text-[15px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, optio nesciunt recusandae sapiente numquam dignissimos ducimus ullam eum. Enim, fugit?</p>
                     </div>
-                    <div>
+                    <div >
                         <div className='flex p-1 border-b-2 justify-center border-[#32af6f] w-[120px] items-center text-[#32af6f] hover:bg-[#32af6f]  hover:text-white'>
                             learn more <span><GoArrowRight/></span>
                         </div>
+                       
                     </div>
                 </div>
                 <div className=' p-2 lg:w-3/6  '>
                     <div className=' hover:border-[15px] p-4 hover:rounded-[15px] hover:border-[#32af6f] '><img className="w-full h-full" src="../../../public/img/tours/tour-1-1.jpg" alt="" /></div>
+                    
+                    
                  
                 </div>
+                
              </div>
         </div>
     </section>

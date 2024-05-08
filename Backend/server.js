@@ -19,8 +19,8 @@ app.set('views', './views');
 // );
 
 mongoose
- .connect(process.env.DATABASE_LOCAL)
-  .then(() => console.log("DB connection successful!"));
+ .connect(process.env.DATABASE)
+  .then(() => console.log("DB connection successfully!"));
 
 const port = 3000;
 
