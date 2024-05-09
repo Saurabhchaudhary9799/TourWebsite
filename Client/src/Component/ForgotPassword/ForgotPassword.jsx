@@ -6,7 +6,7 @@ const ForgotPassword = () => {
  const handleForgotPassword = async() =>{
     try {
       console.log(email)
-        const response  = await axios.post('http://127.0.0.1:5000/api/v1/users/forgotPassword',{
+        const response  = await axios.post('https://tourwebsite.onrender.com/api/v1/users/forgotPassword',{
           email 
         },{
           headers: {

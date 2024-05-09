@@ -35,7 +35,7 @@ const AdminDashboard = () => {
           },
         };
         const { data } = await axios.get(
-          "http://127.0.0.1:5000/api/v1/users/natour-stats",
+          "https://tourwebsite.onrender.com/api/v1/users/natour-stats",
           config
         );
         if (data) {
