@@ -12,10 +12,10 @@ const PopularTours = () => {
                  <div  className=" relative tour-card w-[350px] h-[500px]  ">
                     <div className="  front absolute  border h-[100%] w-[100%]  flex flex-col gap-y-2 ">
                         <div className='relative border'>
-                            <img className='h-[100%] w-[100%]' src="../../../public/img/tours/tour-1-2.jpg" alt="" />
+                            <img className='h-[100%] w-[100%]' src="https://res.cloudinary.com/dltk6m7c5/image/upload/v1714434404/frrmksllx9cd4mteifxt.jpg" alt="" />
                             <div className=' absolute    bottom-0  right-[10px] flex flex-col items-end'>
-                               <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f" , opacity:0.8}}>THE FOREST</span>
-                               <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f",opacity:0.8}}>HIKER</span>
+                               <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f" , opacity:0.8}}>THE SEA</span>
+                               <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f",opacity:0.8}}>EXPLORER</span>
 
                             </div>
                         </div>
@@ -35,12 +35,12 @@ const PopularTours = () => {
                     </div>
                  </div>
                  <div  className=" relative tour-card w-[350px] h-[500px]  ">
-                    <div className="  front absolute  border h-[100%] w-[100%]  flex flex-col gap-y-2 ">
-                        <div className='relative border'>
-                            <img className='h-[100%] w-[100%]' src="../../../public/img/tours/tour-1-3.jpg" alt="" />
+                    <div className="  front absolute   h-[100%] w-[100%]  flex flex-col gap-y-2 ">
+                        <div className='relative '>
+                            <img className='h-[100%] w-[100%]' src="https://res.cloudinary.com/dltk6m7c5/image/upload/v1714434378/z105jbpwmajnuqdchbvu.jpg" alt="" />
                             <div className=' absolute    bottom-0  right-[10px] flex flex-col items-end'>
-                               <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f" , opacity:0.8}}>THE FOREST</span>
-                               <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f",opacity:0.8}}>HIKER</span>
+                               <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f" , opacity:0.8}}>THE SNOW</span>
+                               <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f",opacity:0.8}}>ADVENTURER</span>
 
                             </div>
                         </div>
@@ -62,7 +62,7 @@ const PopularTours = () => {
                  <div  className=" relative tour-card w-[350px] h-[500px] ">
                     <div className="  front absolute  border h-[100%] w-[100%]  flex flex-col gap-y-2 ">
                         <div className='relative border'>
-                            <img className='h-[100%] w-[100%]' src="../../../public/img/tours/tour-1-1.jpg" alt="" />
+                            <img className='h-[100%] w-[100%]' src="https://res.cloudinary.com/dltk6m7c5/image/upload/v1714434346/bssze3k96acpiqqxxb6t.jpg" alt="" />
                             <div className=' absolute    bottom-0  right-[10px] flex flex-col items-end'>
                                <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f" , opacity:0.8}}>THE FOREST</span>
                                <span className='px-3 py-2 text-3xl text-white font-extrabold' style={{backgroundColor:"#32af6f",opacity:0.8}}>HIKER</span>

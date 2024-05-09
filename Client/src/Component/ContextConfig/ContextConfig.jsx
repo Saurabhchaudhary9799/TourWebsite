@@ -14,7 +14,7 @@ export const UserProvider = ({children}) =>{
     const fetchData = async () => {
         try {
           setLoading(true);
-          const response = await axios.get('http://localhost:3000/api/v1/tours');
+          const response = await axios.get('https://natour-iy4i.onrender.com/api/v1/tours');
           if(!response){
             setError('something went wrong');
           }

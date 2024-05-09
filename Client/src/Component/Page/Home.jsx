@@ -10,15 +10,13 @@ import BookingFirstSteps from '../BookingFirstSteps/BookingFirstSteps'
 
 const Home = () => {
   return (
-    <div >
-
+    <div className='' >
      <Overview/>
      <AboutTours/>
      <Features/>
      <PopularTours/>
      <Stories/>
      <BookingFirstSteps/>
-    
     </div>
   )
 }

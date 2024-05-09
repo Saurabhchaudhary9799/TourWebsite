@@ -26,7 +26,7 @@ const AboutTours = () => {
                     </div>
                 </div>
                 <div className=' p-2 lg:w-3/6  '>
-                    <div className=' hover:border-[15px] p-4 hover:rounded-[15px] hover:border-[#32af6f] '><img className="w-full h-full" src="../../../public/img/tours/tour-1-1.jpg" alt="" /></div>
+                    <div className=' hover:border-[15px] p-4 hover:rounded-[15px] hover:border-[#32af6f] '><img className="w-full h-full" src="https://res.cloudinary.com/dltk6m7c5/image/upload/v1714434319/puydp4p4qx1g2424z2xv.jpg" alt="" /></div>
                     
                     
                  

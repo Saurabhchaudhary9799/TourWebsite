@@ -25,8 +25,8 @@ const AllTours = () => {
 
    
   return (
-    <section className="all-tours-section flex justify-center py-16 px-16 bg-[#F3F4F5]">
-      <div className="container grid grid-cols-3 gap-4">
+    <section className="all-tours-section flex justify-center py-16 px-4 sm:px-16 bg-[#F3F4F5]">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
        {
         filteredTours.length > 0 ? <TourList tours={filteredTours}/> : <TourList tours={tours}/>
        }

@@ -11,7 +11,7 @@ const Header = () => {
   const [user, setUser] = useState("");
   const [search, setSearch] = useState("");
   const [tours, setTours] = useState([]);
-
+  const [isOpen ,setIsOpen] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     const response = localStorage.getItem("userInfo");
@@ -51,7 +51,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header-section flex justify-center items-center  mt-5 bg-black py-2">
+    <div className="header-section flex justify-center items-center   bg-black py-2 relative">
       <div className="container  flex justify-between items-center px-10  ">
         <div className="flex justify-center items gap-x-2 text-3xl text-[#32af6f]">
           <Link to={"/"}>
@@ -76,7 +76,7 @@ const Header = () => {
             <ToastContainer />
           </div>
         </div>
-        <div className=" hidden md:block ">
+        <div className=" hidden md:block " >
         {user ? (
           <Profile user={user} />
         ) : (
@@ -95,9 +95,20 @@ const Header = () => {
           </div>
         )}
         </div>
-        <div className="flex md:hidden text-white">
+        <div className="flex md:hidden text-white" onClick={()=>setIsOpen(!isOpen)}>
             <span><FiMenu/></span>
         </div>
+        {isOpen && <div className="absolute top-10 right-10 bg-white z-10 w-[150px] rounded-xl p-2">
+                <div className="flex flex-col items-center gap-y-1">
+                <Link to={"/login"}>
+                  <div className=" text-center hover:text-[#32af6f] hover:cursor-pointer">
+                    Login</div></Link>
+                    <Link to={"/signup"}>
+                  <div className=" text-center hover:text-[#32af6f] hover:cursor-pointer">
+                    Signup</div></Link>
+                </div>
+            </div> }
+        
       </div>
     </div>
   );
