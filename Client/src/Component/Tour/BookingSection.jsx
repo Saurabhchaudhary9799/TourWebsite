@@ -37,7 +37,7 @@ const BookingSection = ({ tour }) => {
       };
       // 1) Get checkout session from API
       const session = await axios.get(
-        `https://natour-iy4i.onrender.com/api/v1/bookings/checkout-session/${tourId}`,
+        `http://127.0.0.1:5000/api/v1/bookings/checkout-session/${tourId}`,
         config
       );
       console.log(session),
@@ -50,26 +50,26 @@ const BookingSection = ({ tour }) => {
   };
 
   return (
-    <section className="booking-section flex justify-center py-16 px-10 bg-[#F3F4F5]">
-      <div className="container flex  px-16 py-10 rounded-xl bg-white">
-        <div className="w-2/6  relative  h-32  ">
+    <section className="booking-section flex justify-center py-10 px-0  lg:py-16 lg:px-10 bg-[#F3F4F5] border">
+      <div className="container flex flex-col lg:flex-row px-4 lg:px-16 py-10 rounded-xl bg-white">
+        <div className="md:w-2/6  relative  h-32 hidden lg:block ">
           <img
             className="w-32 h-32 object-cover rounded-full absolute left-0 z-40 "
-            src="../../../public/img/tours/tour-3-1.jpg"
+            src="https://res.cloudinary.com/dltk6m7c5/image/upload/v1714434048/d0q9inhbfffrjiw3wfic.jpg"
             alt=""
           />
           <img
             className="w-32 h-32 object-cover rounded-full absolute left-10 z-20 "
-            src="../../../public/img/tours/tour-3-2.jpg"
+            src="https://res.cloudinary.com/dltk6m7c5/image/upload/v1714434319/puydp4p4qx1g2424z2xv.jpg"
             alt=""
           />
           <img
             className="w-32 h-32 object-cover rounded-full absolute left-20 "
-            src="../../../public/img/tours/tour-3-2.jpg"
+            src="https://res.cloudinary.com/dltk6m7c5/image/upload/v1714434404/frrmksllx9cd4mteifxt.jpg"
             alt=""
           />
         </div>
-        <div className="w-4/6  flex items-center justify-center gap-x-5">
+        <div className=" lg:w-4/6   flex flex-col gap-y-5 lg:flex-row items-center justify-center lg:gap-x-5 ">
           <div>
             <h1 className="text-[#32af6f] text-3xl font-bold">
               WHAT ARE YOU WAITING FOR?
@@ -83,6 +83,7 @@ const BookingSection = ({ tour }) => {
               className="bg-[#32af6f] text-white text-xl font-bold p-3 rounded-3xl"
               onClick={handleBooking}
             >
+            
               Book Now
             </Link>
           </motion.div>

@@ -6,10 +6,10 @@ const PopularTours = () => {
     <section style={{backgroundColor:"#F3F4F5"}} className="popular-tours-section flex justify-center py-16">
         <div className="container  flex flex-col gap-y-5">
              <div className='flex justify-center'>
-                <h1 className='text-4xl font-extrabold text-[#32af6f]'>MOST POPULAR TOURS</h1>
+                <h1 className='text-4xl font-extrabold text-[#32af6f] text-center'>MOST POPULAR TOURS</h1>
              </div>
-             <div className="popular-tours flex flex-col-reverse  items-center justify-center gap-y-10 py-10 md:flex-row md:gap-x-10 ">
-                 <div  className=" relative tour-card w-[350px] h-[500px]  ">
+             <div className="popular-tours flex flex-col-reverse  items-center justify-center gap-y-10 py-10 px-2 md:flex-row md:gap-x-10  ">
+                 <div  className=" relative tour-card w-[300px] sm:w-[350px] h-[500px]  ">
                     <div className="  front absolute  border h-[100%] w-[100%]  flex flex-col gap-y-2 ">
                         <div className='relative border'>
                             <img className='h-[100%] w-[100%]' src="https://res.cloudinary.com/dltk6m7c5/image/upload/v1714434404/frrmksllx9cd4mteifxt.jpg" alt="" />
@@ -34,7 +34,7 @@ const PopularTours = () => {
                            <button className='border p-4 rounded-[30px] bg-white text-[#777] text-[400]'>BOOK NOW!</button>
                     </div>
                  </div>
-                 <div  className=" relative tour-card w-[350px] h-[500px]  ">
+                 <div  className=" relative tour-card w-[300px] sm:w-[350px] h-[500px]  ">
                     <div className="  front absolute   h-[100%] w-[100%]  flex flex-col gap-y-2 ">
                         <div className='relative '>
                             <img className='h-[100%] w-[100%]' src="https://res.cloudinary.com/dltk6m7c5/image/upload/v1714434378/z105jbpwmajnuqdchbvu.jpg" alt="" />
@@ -59,7 +59,7 @@ const PopularTours = () => {
                            <button className='border p-4 rounded-[30px] bg-white text-[#777] text-[400]'>BOOK NOW!</button>
                     </div>
                  </div>
-                 <div  className=" relative tour-card w-[350px] h-[500px] ">
+                 <div  className=" relative tour-card  w-[300px] sm:w-[350px] h-[500px] ">
                     <div className="  front absolute  border h-[100%] w-[100%]  flex flex-col gap-y-2 ">
                         <div className='relative border'>
                             <img className='h-[100%] w-[100%]' src="https://res.cloudinary.com/dltk6m7c5/image/upload/v1714434346/bssze3k96acpiqqxxb6t.jpg" alt="" />

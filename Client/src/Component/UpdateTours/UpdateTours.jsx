@@ -104,7 +104,7 @@ const UpdateTours = () => {
       };
       // ",{name,duration,difficulty,maxGroupSize ,price ,summary,startLocation}
       const response = await axios.patch(
-        `https://natour-iy4i.onrender.com/api/v1/tours/${tourId}`,
+        `http://127.0.0.1:5000/api/v1/tours/${tourId}`,
         formData,
         config
       );
@@ -120,8 +120,8 @@ const UpdateTours = () => {
 
   return (
     <section className="update-tours-section border ">
-      <div className="container  px-16 py-10">
-        <div className="grid grid-cols-2 gap-4">
+      <div className="container  px-4 py-4 lg:px-16 lg:py-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>
             <input
               type="text"
@@ -197,7 +197,7 @@ const UpdateTours = () => {
             />
           </div> */}
 
-          <div className="col-span-2">
+          <div className="lg:col-span-2">
             <input
               type="number"
               placeholder="Price"
@@ -206,7 +206,7 @@ const UpdateTours = () => {
               className="w-full h-full rounded-xl"
             />
           </div>
-          <div className="col-span-2">
+          <div className="lg:col-span-2">
             <input
               type="text"
               placeholder="summary"
@@ -215,7 +215,7 @@ const UpdateTours = () => {
               className="w-full h-full rounded-xl border border-[#777]"
             />
           </div>
-          <div className="col-span-2">
+          <div className="lg:col-span-2">
             <input
               type="file"
               placeholder="image cover "
@@ -224,7 +224,7 @@ const UpdateTours = () => {
             />
           </div>
 
-          <div className="col-span-2">
+          <div className="lg:col-span-2">
             <div
               className="border p-2 rounded-xl bg-[#32af6f] text-center text-white hover:cursor-pointer"
               onClick={handleUpdateTour}

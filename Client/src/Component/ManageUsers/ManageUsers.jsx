@@ -20,7 +20,7 @@ const ManageUsers = () => {
         },
       };
       const { data } = await axios.get(
-        "https://natour-iy4i.onrender.com/api/v1/users",
+        "http://127.0.0.1:5000/api/v1/users",
         config
       );
       setUsers(data.doc);
@@ -34,8 +34,8 @@ const ManageUsers = () => {
   }, []);
 
   return (
-    <section className="manage-user-section   ">
-      <div className="container  py-5 px-2 flex flex-col ">
+    <section className="manage-user-section  ">
+      <div className="container  py-5 px-2 flex flex-col w-[80vw] overflow-hidden ">
         <div className="grid grid-cols-12 gap-2">
           <div className="col-span-3  text-center font-extrabold ">
             User_id

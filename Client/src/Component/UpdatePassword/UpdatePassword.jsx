@@ -25,7 +25,7 @@ const UpdatePassword = ({handleClose}) => {
          }
         }
 
-        const {data} = await axios.patch('https://natour-iy4i.onrender.com/api/v1/users/updateMyPassword',{passwordCurrent , password, passwordConfirm} ,config);
+        const {data} = await axios.patch('http://127.0.0.1:5000/api/v1/users/updateMyPassword',{passwordCurrent , password, passwordConfirm} ,config);
 
         console.log(data);
         // localStorage.setItem('userInfo' , JSON.stringify(data));

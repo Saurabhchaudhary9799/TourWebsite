@@ -102,7 +102,7 @@ const CreateTour = () => {
         },
       };
       // ",{name,duration,difficulty,maxGroupSize ,price ,summary,startLocation}
-      const response = await axios.post("https://natour-iy4i.onrender.com/api/v1/tours",formData ,config);
+      const response = await axios.post("http://127.0.0.1:5000/api/v1/tours",formData ,config);
       console.log(response);
       if (response.data.status === "success") {
         toast("Tour is created successfully");
@@ -114,8 +114,8 @@ const CreateTour = () => {
 
   return (
     <section className="create-tours-section  ">
-      <div className="container  px-16 py-10">
-        <div className="grid grid-cols-2 gap-4">
+      <div className="container px-4 py-4 lg:px-16 lg:py-10 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4  ">
           <div>
             <input
               type="text"
@@ -191,7 +191,7 @@ const CreateTour = () => {
             />
           </div> */}
 
-          <div className="col-span-2">
+          <div className="lg:col-span-2">
             <input
               type="number"
               placeholder="Price"
@@ -200,7 +200,7 @@ const CreateTour = () => {
               className="w-full h-full rounded-xl"
             />
           </div>
-          <div className="col-span-2">
+          <div className="lg:col-span-2">
             <input
               type="text"
               placeholder="summary"
@@ -209,7 +209,7 @@ const CreateTour = () => {
               className="w-full h-full rounded-xl border border-[#777]"
             />
           </div>
-          <div className="col-span-2">
+          <div className="lg:col-span-2">
             <input
               type="file"
               placeholder="image cover "
@@ -218,7 +218,7 @@ const CreateTour = () => {
             />
           </div>
 
-          <div className="col-span-2">
+          <div className="lg:col-span-2">
             <div
               className="border p-2 rounded-xl bg-[#32af6f] text-center text-white hover:cursor-pointer"
               onClick={handleCreateTour}

@@ -74,8 +74,9 @@ app.use((req, res, next) => {
 //   origin: 'https://natour-web-app.netlify.app'
 // }))
 app.use(cors({
-  origin: 'http://localhost:5174/'
-}))
+  origin: 'http://localhost:5173'
+}));
+
 // 3) ROUTES
 app.use("/api/v1/tours", tourRouter);
 app.use("/api/v1/users", userRouter);

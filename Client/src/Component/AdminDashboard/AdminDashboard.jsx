@@ -35,7 +35,7 @@ const AdminDashboard = () => {
           },
         };
         const { data } = await axios.get(
-          "https://natour-iy4i.onrender.com/api/v1/users/natour-stats",
+          "http://127.0.0.1:5000/api/v1/users/natour-stats",
           config
         );
         if (data) {
@@ -53,7 +53,7 @@ const AdminDashboard = () => {
   }, [totalUsers, totalRevenue, totalTours]);
   return (
     <div className="flex flex-col gap-y-10">
-      <div className="grid grid-cols-4 p-4 gap-x-10 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-4 gap-10 ">
         <div className="total-tours flex justify-center  items-center border gap-x-5 py-10 border-[#32af6f] rounded-xl bg-white hover:-translate-y-[3px] ease-in-out duration-300">
           {" "}
           <span className="text-xl text-[#777] font-bold">
@@ -78,8 +78,8 @@ const AdminDashboard = () => {
           ${totalRevenue}
         </div>
       </div>
-      <div className="flex gap-x-2">
-      <div className="w-3/6">
+      <div className="flex flex-col lg:flex-row gap-x-2">
+      <div className="flex justify-center items-center lg:w-3/6">
         <Bar
           data={{
             labels:["totalUsers","totalTours","totalBookings"],
@@ -106,7 +106,7 @@ const AdminDashboard = () => {
           }}
         />
       </div>
-      <div className="w-3/6">
+      <div className=" flex justify-center items-center lg:w-3/6">
         <Doughnut
           data={{
             labels:["totalUsers","totalTours","totalBookings"],

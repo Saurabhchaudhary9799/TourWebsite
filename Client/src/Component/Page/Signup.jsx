@@ -14,7 +14,7 @@ const Signup = () => {
 
   const handleSignup = async()  =>{
       try {
-          const {data} = await axios.post('https://natour-iy4i.onrender.com/api/v1/users/signup',{
+          const {data} = await axios.post('http://127.0.0.1:5000/api/v1/users/signup',{
             name ,email ,password,passwordConfirm
           },{
             headers: {
@@ -32,13 +32,13 @@ const Signup = () => {
 
 
   return (
-    <section className="signup-section py-10 bg-[#F3F4F5] "> 
+    <section className="signup-section py-10 bg-[#F3F4F5] flex justify-center "> 
    <div className="container  flex flex-col justify-between items-center gap-y-10 ">
       
        <div>
-        <h1 className='text-3xl font-bold'>Enjoy your trip !</h1>
+        <h1 className='text-xl sm:text-3xl font-bold'>Enjoy your trip !</h1>
        </div>
-       <div className='w-[300px]'>
+       <div className='w-[200px] sm:w-[300px]'>
          <form className='login-form flex flex-col gap-y-5 '>
          <div className='form-group border-b-2 border-[#32af6f] flex justify-start items-center   h-[50px]'>
                  <input className='w-full h-full border-none' type="text" placeholder='Full Name' value={name} onChange={(e)=>setName(e.target.value)} />
@@ -58,7 +58,7 @@ const Signup = () => {
              </div>
          </form>
        </div>
-       <div>
+       <div className='px-2 text-sm text-center'>
           Already have an account? <span className='text-[#32af6f] hover:underline '><Link to={"/login"}>login</Link> </span> here
        </div>
    </div>

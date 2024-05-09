@@ -11,7 +11,7 @@ const Login = () => {
     const navigate = useNavigate();
     const handleLogin =async () =>{
       try {
-         const {data} = await axios.post('https://natour-iy4i.onrender.com/api/v1/users/login',{
+         const {data} = await axios.post('http://127.0.0.1:5000/api/v1/users/login',{
            email ,password
          },{
            headers: {
@@ -32,27 +32,18 @@ const Login = () => {
       } catch (error) {
         console.log(error);
      }
-         // if((email === adminEmail) && (password === adminPassword)){
-         //    console.log(email , password);
-         //    setIsLoggedIn(true)
-         // }else{
-         //    console.log(`Incorrect Admin username & password`)
-         // }
+
     }
 
-   //  if (isLoggedIn) {
-   //      // Redirect to admin page if user is logged in
-   //      navigate("/admin")
-   //    }
     
   return (
-<section className="login-section py-10 bg-[#F3F4F5] "> 
-   <div className="container  flex flex-col justify-between items-center gap-y-10 ">
+<section className="login-section py-10 bg-[#F3F4F5]  flex justify-center"> 
+   <div className="container  flex flex-col justify-between items-center gap-y-10">
        <div><h1 className='text-xl '>Natours</h1></div>
        <div>
-        <h1 className='text-3xl font-bold'>Good to see you again!</h1>
+        <h1 className=' text-xl sm:text-3xl font-bold'>Good to see you again!</h1>
        </div>
-       <div className='w-[300px]'>
+       <div className=' w-[200px] sm:w-[300px]'>
          <form className='login-form flex flex-col gap-y-5 '>
               
              <div className='form-group border-b-2 border-[#32af6f] flex justify-start items-center   h-[50px]'>

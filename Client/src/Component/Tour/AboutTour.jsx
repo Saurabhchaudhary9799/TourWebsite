@@ -9,32 +9,32 @@ const AboutTour = ({ tour }) => {
   
   return (
     <section className="about-tour-section flex justify-center py-16">
-      <div className="container flex ">
-        <div className=" bg-[#F3F4F5] w-3/6 flex flex-col gap-y-10 py-10">
+      <div className="container flex flex-col md:flex-row">
+        <div className=" bg-[#F3F4F5] md:w-3/6 flex flex-col gap-y-10 py-10">
           <div className="flex flex-col justify-start items-center gap-y-5">
-            <div className="text-[#32af6f] text-2xl">QUICK FACTS</div>
-            <div className="flex gap-x-2 items-center">
-              <span className="text-[#32af6f]">
+            <div className="text-[#32af6f] text-xl md:text-2xl">QUICK FACTS</div>
+            <div className="flex gap-x-2 items-center text-sm md:text-md">
+              <span className="text-[#32af6f] ">
                 <MdDateRange />
               </span>
               <span className="text-[#777]-500 mr-4">NEXT DATE</span>{" "}
               <span className="text-[#777]">june 2024</span>
             </div>
-            <div className="flex gap-x-2 items-center">
+            <div className="flex gap-x-2 items-center text-sm md:text-md">
               <span className="text-[#32af6f]">
                 <BsGraphUpArrow />
               </span>
               <span className="text-[#777]-500 mr-4">DIFFICULTY</span>
               <span className="text-[#777]">{tour.difficulty}</span>
             </div>
-            <div className="flex gap-x-2 items-center">
+            <div className="flex gap-x-2 items-center text-sm md:text-md">
               <span className="text-[#32af6f]">
                 <MdOutlinePersonOutline />
               </span>
               <span className="text-[#777]-500 mr-4">PARTICIPANTS</span>{" "}
               <span className="text-[#777]">{tour.maxGroupSize} People</span>
             </div>
-            <div className="flex gap-x-2 items-center">
+            <div className="flex gap-x-2 items-center text-sm md:text-md">
               <span className="text-[#32af6f]">
                 <MdOutlineStarBorder />
               </span>
@@ -43,15 +43,15 @@ const AboutTour = ({ tour }) => {
             </div>
           </div>
           <div className="flex flex-col justify-start items-center gap-y-5">
-            <div className="text-[#32af6f] text-2xl">YOUR TOUR GUIDES</div>
-            <div className="flex gap-x-2 items-center">
+            <div className="text-[#32af6f] text-xl md:text-2xl">YOUR TOUR GUIDES</div>
+            <div className="flex gap-x-2 items-center text-sm md:text-md">
               <span className="text-[#32af6f]">
                 <MdOutlineStarBorder />
               </span>
               <span className="text-[#777]-500 mr-4">LEAD GUIDE</span>{" "}
               <span className="text-[#777]">Miyah Myles</span>
             </div>
-            <div className="flex gap-x-2 items-center">
+            <div className="flex gap-x-2 items-center text-sm md:text-md">
               <span className="text-[#32af6f]">
                 <MdOutlineStarBorder />
               </span>
@@ -60,11 +60,11 @@ const AboutTour = ({ tour }) => {
             </div>
           </div>
         </div>
-        <div className=" w-3/6 flex flex-col gap-y-10 py-10">
+        <div className=" md:w-3/6 flex flex-col gap-y-10 py-10">
             <div> 
                <h1 className="text-[#32af6f] text-3xl font-bold  text-center">ABOUT {tourName}</h1>
             </div>
-            <div className="flex flex-col gap-y-5  items-center justify-center px-10 text-[#777] text-lg">
+            <div className="flex flex-col gap-y-5  items-center justify-center px-4 sm:px-10 text-[#777] text-lg">
                {tour.description}
                {/* <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                <p>

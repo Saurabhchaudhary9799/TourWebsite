@@ -3,18 +3,18 @@ import "./BookingFirstSteps.css"
 import { GoArrowRight } from "react-icons/go";
 const BookingFirstSteps = () => {
   return (
-    <section className='booking-first-steps flex justify-center py-16  px-16 bg-[#32af6f]'>
+    <section className='booking-first-steps flex sm:justify-center sm:py-16  sm:px-16   bg-[#32af6f]'>
          <div className="container  py-10 px-10 ">
-             <div className='sm:w-[400px]'>
+             <div className='sm:w-[50%]'>
                 <form  className='form flex flex-col gap-y-10 ' >
                     <div  >
                         <h1 className='text-xl md:text-3xl text-[#32af6f] font-extrabold hover:text-4xl hover:rotate-2'>START BOOKING NOW</h1>
                     </div>
-                    <div className='form-group  h-[50px] bg-white flex justify-start items-center pl-5 rounded-[30px] '>
-                        <input type="text" placeholder='Full Name' className='border-none'/>
+                    <div className='form-group  h-[50px] bg-white flex justify-start items-center  rounded-[30px] '>
+                        <input type="text" placeholder='Full Name' className='border-none w-full rounded-[30px]'/>
                     </div>
-                    <div className='form-group  h-[50px] bg-white flex justify-start items-center pl-5 rounded-[30px] '>
-                        <input type="email" placeholder='Email Address' className='border-none'/>
+                    <div className='form-group  h-[50px] bg-white flex justify-start items-center  rounded-[30px] '>
+                        <input type="email" placeholder='Email Address' className='border-none w-full rounded-[30px]'/>
                     </div>
                     <div className="form-group flex flex-col sm:flex-row sm:justify-center gap-x-5 ">
                         <div className='sm:w-3/6 flex justify-center gap-x-2'>

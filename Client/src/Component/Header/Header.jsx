@@ -31,7 +31,7 @@ const Header = () => {
       };
 
       const { data } = await axios.get(
-        `https://natour-iy4i.onrender.com/api/v1/tours/search/${search}`
+        `http://127.0.0.1:5000/api/v1/tours/search/${search}`
       );
      
       if (data) {
@@ -76,11 +76,11 @@ const Header = () => {
             <ToastContainer />
           </div>
         </div>
-        <div className=" hidden md:block " >
+        <div className=" flex justify-center items-center gap-x-4">
         {user ? (
           <Profile user={user} />
         ) : (
-          <div className=" flex justify-center items-center px-3 py-2 gap-x-10">
+          <div className=" flex justify-center items-center px-3 py-2 gap-x-10 hidden md:flex">
             <motion.div whileHover={{ y: -2 }} className="text-white">
               <Link to={"/login"}>LOGIN</Link>
             </motion.div>
@@ -94,10 +94,10 @@ const Header = () => {
             
           </div>
         )}
-        </div>
-        <div className="flex md:hidden text-white" onClick={()=>setIsOpen(!isOpen)}>
+        {!user && <div className="flex md:hidden text-white" onClick={()=>setIsOpen(!isOpen)}>
             <span><FiMenu/></span>
-        </div>
+        </div>}
+        
         {isOpen && <div className="absolute top-10 right-10 bg-white z-10 w-[150px] rounded-xl p-2">
                 <div className="flex flex-col items-center gap-y-1">
                 <Link to={"/login"}>
@@ -108,7 +108,7 @@ const Header = () => {
                     Signup</div></Link>
                 </div>
             </div> }
-        
+            </div>
       </div>
     </div>
   );
