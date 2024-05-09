@@ -19,7 +19,7 @@ app.set('views', './views');
 // );
 
 mongoose
- .connect(process.env.DATABASE_LOCAL)
+ .connect(process.env.DATABASE)
   .then(() => console.log("DB connection successfully!"));
 
 const port = process.env.PORT || 5000;
