@@ -12,7 +12,7 @@ Wanna check the weather of the place you are visiting, it already integrated in.
 
 ## 💡 Why did I build this?
 
-I aimed to build an intuitive, user-friendly platform that simplifies trip planning. This project combines my passion for travel with my technical skills, aiming to inspire others to explore the world effortlessly.
+I aimed to build an intuitive, user-friendly platform that simplifies trip planning. This project combines my passion for travel with my technical skills, aiming to inspire others to explore the world effortlessly. And may be someday have my own travel agency.
 
 ## 🛠️ Local development
 
@@ -79,6 +79,12 @@ npm run lint
   - A regular user can remove a tour from their list of favorite tours.
   - A regular user can not add a tour to their list of favorite tours when it is already a favorite.
 - Credit card Payment
+
+![Natours](https://github.com/Saurabhchaudhary9799/TourWebsite/blob/master/Client/public/img/Screenshot%20from%202024-05-24%2012-39-56.png)
+![Natours](https://github.com/Saurabhchaudhary9799/TourWebsite/blob/master/Client/public/img/Screenshot%20from%202024-05-24%2012-40-12.png)
+![Natours](https://github.com/Saurabhchaudhary9799/TourWebsite/blob/master/Client/public/img/Screenshot%20from%202024-05-24%2012-41-09.png)
+![Natours](https://github.com/Saurabhchaudhary9799/TourWebsite/blob/master/Client/public/img/Screenshot%20from%202024-05-24%2012-41-48.png)
+
 
 ## How To Use 🤔
 
