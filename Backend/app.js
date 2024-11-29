@@ -70,8 +70,10 @@ app.use((req, res, next) => {
   next();
 });
 
+const ORIGIN = process.env.NODE_ENV === "development" ? "http://localhost:5173" : "https://natour-web-app.netlify.app" ;
+
 app.use(cors({
-  origin: 'https://natour-web-app.netlify.app'
+  origin: ORIGIN
 }))
 // app.use(cors({
 //   origin: 'http://localhost:5173'
